@@ -8,11 +8,12 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     strategy:
+      fail-fast: false      
       matrix:
-        python-version: [3.8.18, 3.10.18, 3.3.10.18, 3.11.7, 3.12.11]
+        python-version: [3.8.18, 3.10.18, 3.10.18, 3.11.7, 3.12.11]
 
     steps:
     - name: Checkout code
